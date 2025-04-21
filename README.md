@@ -21,6 +21,9 @@ npm i
 npm run dev
 ```
 
+### 3. Vercel deployment
+https://calm-connect-ochre.vercel.app/
+
 ### Track your mood over time
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/7345611d-082b-474f-afaa-d9a495625490" />
 
