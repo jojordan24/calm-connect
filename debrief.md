@@ -14,6 +14,7 @@ Key Findings & User Sentiments
 Prioritized List of Usability Issues
  
 🔴 1. Crisis Resource Invisibility (Critical – High Frequency, High Severity)
+
 Issue: Users could not find crisis help during high-stress tasks. It was buried in the user profile, not visible from the homepage. 
   
   Resolution Plan:
@@ -22,6 +23,7 @@ Issue: Users could not find crisis help during high-stress tasks. It was buried 
 * Add an onboarding tip/tool-tip to direct users to the location
 
 🟠 2. Unclear Homepage Purpose (High Frequency, Moderate Severity)
+
 Issue: None of the users could identify what the app was for from the homepage alone. 
   
   Resolution Plan:
@@ -30,6 +32,7 @@ Issue: None of the users could identify what the app was for from the homepage a
 * Branding
 
 🟠 3. Confusing Dashboard Metrics (Moderate Frequency, Moderate Severity)
+
 Issue: Several users were confused by how the dashboard metrics, especially mood averages, were calculated and presented. 
   
   Resolution Plan:
@@ -37,6 +40,7 @@ Issue: Several users were confused by how the dashboard metrics, especially mood
 * Use simpler language or visual cues to show what the dashboard is tracking
 
 🟡 4. Limited Mood Tracking Options (Low Frequency, Moderate Severity)
+
 Issue: Some users (Habibe in particular) felt that three moods were too limiting. 
   
   Resolution Plan:
@@ -44,6 +48,7 @@ Issue: Some users (Habibe in particular) felt that three moods were too limiting
 * Enable a slider-based or spectrum input for greater nuance
 
 🟡 5. Misleading Navigation Icons (Low Frequency, Low Severity)
+
 Issue: Saleh noted arrow indicators implied deeper navigation when none existed. 
   
   Resolution Plan:
@@ -51,6 +56,7 @@ Issue: Saleh noted arrow indicators implied deeper navigation when none existed.
 * Ensure navigation indicators are only used when content expands
 
 🟢 6. Community Forum Anonymity Unclear (High Frequency, Low Severity)
+
 Issue: Tasin, Saleh, Habibe, and Faiaz were unsure if posts were anonymous or visible to everyone. 
   
   Resolution Plan:
