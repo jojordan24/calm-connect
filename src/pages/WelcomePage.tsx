@@ -15,14 +15,14 @@ export default function WelcomePage() {
           <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome</h1>
           <div className="mb-4">
             <UserAvatar 
-              name="Akhmad Mamirov" 
+              name="Jojo Jordan" 
               image="/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png"
               size="xl"
               className="mx-auto mb-4 border-2 border-thrive-light-purple shadow-sm"
             />
             <div className="mt-2 text-sm">
-              <p className="font-medium text-thrive-dark-blue text-xl drop-shadow-sm">Akhmad Mamirov</p>
-              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@papa_needs_an_A</p>
+              <p className="font-medium text-thrive-dark-blue text-xl drop-shadow-sm">Jojo Jordan</p>
+              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@nice_weather</p>
             </div>
           </div>
         </div>
@@ -43,10 +43,6 @@ export default function WelcomePage() {
               REGISTER
             </Button>
           </Link>
-        </div>
-
-        <div className="w-full flex justify-center mt-8">
-          <CircleArrowDown className="text-thrive-neutral-gray animate-bounce" size={32} />
         </div>
       </div>
     </MarbleBackground>
