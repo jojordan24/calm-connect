@@ -18,7 +18,7 @@ export function ChatbotLauncher() {
       {open && (
         <div className="fixed top-1/3 right-6 w-96 max-w-sm bg-white text-black rounded-xl shadow-xl z-50 overflow-hidden border border-gray-300">
           <div className="flex items-center justify-between p-4 border-b">
-            <h4 className="text-lg font-semibold">Mental Health Chatbot</h4>
+            <h4 className="text-lg font-semibold">Calmy</h4>
             <button onClick={() => setOpen(false)} aria-label="Close chat">
               <X className="w-5 h-5 text-gray-500 hover:text-gray-700" />
             </button>

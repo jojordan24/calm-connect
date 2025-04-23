@@ -16,7 +16,7 @@ import DiscoverPage from "./pages/DiscoverPage";
 import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import CommunityPage from "./pages/CommunityPage";
-import CrisisResourcesPage from "./pages/CrisisResourcesPage";
+import CrisisResourcesPage from "./pages/ResourcesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();

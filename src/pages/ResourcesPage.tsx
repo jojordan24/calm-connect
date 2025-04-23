@@ -60,7 +60,7 @@ export default function CrisisResourcesPage() {
           <ArrowLeft className="h-4 w-4 mr-2" /> Back
         </Button>
         
-        <h1 className="text-2xl font-bold mb-6">Crisis Resources</h1>
+        <h1 className="text-2xl font-bold mb-6">My Resources</h1>
         
         <div className="mb-8">
           <h2 className="text-xl font-semibold mb-4">On-Campus Resources</h2>

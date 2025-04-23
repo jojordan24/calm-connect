@@ -19,10 +19,6 @@ export default function ProfilePage() {
     navigate("/welcome");
   };
 
-  const handleCrisisResources = () => {
-    navigate("/crisis-resources");
-  };
-
   return (
     <div className="min-h-screen pb-20">
       <div className="p-6 flex flex-col items-center">
@@ -68,13 +64,7 @@ export default function ProfilePage() {
           </SheetContent>
         </Sheet>
         
-        <Button 
-          variant="outline" 
-          className="w-full py-6 mb-8"
-          onClick={handleCrisisResources}
-        >
-          CRISIS RESOURCES
-        </Button>
+
         
         <div className="w-full mt-auto">
           <Button 
