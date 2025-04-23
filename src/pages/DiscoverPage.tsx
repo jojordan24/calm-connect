@@ -3,7 +3,8 @@ import { useState } from "react";
 import { UserAvatar } from "@/components/ui/user-avatar";
 import { BottomNav } from "@/components/navigation/BottomNav";
 import { Button } from "@/components/ui/button";
-
+import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 const categories = ["My", "Podcasts", "New", "All"];
 
 const meditationItems = [
@@ -45,10 +46,14 @@ const meditationItems = [
 
 export default function DiscoverPage() {
   const [activeCategory, setActiveCategory] = useState("My");
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen pb-20">
       <div className="p-6">
+        <Button variant="ghost" size="sm" className="mb-4" onClick={() => navigate(-1)}>
+          <ArrowLeft className="h-4 w-4 mr-2" /> Back
+        </Button>
         <h1 className="text-3xl font-bold mb-6">Discover</h1>
         
         <div className="flex gap-2 mb-8 overflow-x-auto pb-2">

@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/auth-context";
-
+import { ChatbotLauncher } from "./components/ChatbotLauncher";
 // Pages
 import Index from "./pages/Index";
 import WelcomePage from "./pages/WelcomePage";
@@ -16,7 +16,7 @@ import DiscoverPage from "./pages/DiscoverPage";
 import ProfilePage from "./pages/ProfilePage";
 import SearchPage from "./pages/SearchPage";
 import CommunityPage from "./pages/CommunityPage";
-import CrisisResourcesPage from "./pages/CrisisResourcesPage";
+import CrisisResourcesPage from "./pages/ResourcesPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -42,6 +42,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <ChatbotLauncher />
       </TooltipProvider>
     </AuthProvider>
   </QueryClientProvider>

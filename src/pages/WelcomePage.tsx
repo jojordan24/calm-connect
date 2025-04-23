@@ -12,17 +12,17 @@ export default function WelcomePage() {
         <div className="w-full"></div>
         
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome</h1>
+          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome back Jo!</h1>
           <div className="mb-4">
             <UserAvatar 
-              name="Akhmad Mamirov" 
-              image="/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png"
+              name="Jojo Jordan" 
+              image="/jojo_profile.jpeg"
               size="xl"
               className="mx-auto mb-4 border-2 border-thrive-light-purple shadow-sm"
             />
             <div className="mt-2 text-sm">
-              <p className="font-medium text-thrive-dark-blue text-xl drop-shadow-sm">Akhmad Mamirov</p>
-              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@papa_needs_an_A</p>
+              <p className="font-medium text-thrive-dark-blue text-xl drop-shadow-sm">Jojo Jordan</p>
+              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@engineericaly</p>
             </div>
           </div>
         </div>
@@ -38,15 +38,11 @@ export default function WelcomePage() {
           </Link>
           <Link to="/register" className="block">
             <Button 
-              className="w-full bg-thrive-light-purple/50 py-5 text-lg text-thrive-dark-blue hover:bg-thrive-light-purple/70 border-thrive-light-purple/30"
+              className="w-full  bg-thrive-light-purple/50 py-5 text-lg text-thrive-dark-blue hover:bg-thrive-light-purple/70 "
             >
               REGISTER
             </Button>
           </Link>
-        </div>
-
-        <div className="w-full flex justify-center mt-8">
-          <CircleArrowDown className="text-thrive-neutral-gray animate-bounce" size={32} />
         </div>
       </div>
     </MarbleBackground>
