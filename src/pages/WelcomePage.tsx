@@ -12,17 +12,17 @@ export default function WelcomePage() {
         <div className="w-full"></div>
         
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome</h1>
+          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome back Jojo!</h1>
           <div className="mb-4">
             <UserAvatar 
               name="Jojo Jordan" 
-              image="/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png"
+              image="/jojo_profile.jpeg"
               size="xl"
               className="mx-auto mb-4 border-2 border-thrive-light-purple shadow-sm"
             />
             <div className="mt-2 text-sm">
               <p className="font-medium text-thrive-dark-blue text-xl drop-shadow-sm">Jojo Jordan</p>
-              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@nice_weather</p>
+              <p className="text-thrive-neutral-gray text-base drop-shadow-sm">@engineericaly</p>
             </div>
           </div>
         </div>

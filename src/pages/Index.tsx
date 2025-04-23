@@ -91,9 +91,9 @@ export default function DashboardPage() {
           
           <div className="flex justify-between items-center mt-6">
             <h3 className="text-lg font-medium">Recent Mood</h3>
-            <Button variant="ghost" size="sm" className="text-thrive-purple">
+            {/* <Button variant="ghost" size="sm" className="text-thrive-purple">
               →
-            </Button>
+            </Button> */}
           </div>
           <p className="text-sm text-gray-500 mb-2">You recorded your mood 2 days ago</p>
         </div>
@@ -103,7 +103,7 @@ export default function DashboardPage() {
             <CardTitle className="text-lg text-gray-700">Mood over time</CardTitle>
             <div className="flex justify-between items-center">
               <span className="text-2xl font-bold">Stable</span>
-              <span className="text-sm text-red-500">Last 7 days -5%</span>
+              {/* <span className="text-sm text-red-500">Last 7 days -5%</span> */}
             </div>
           </CardHeader>
           <CardContent>
@@ -125,11 +125,20 @@ export default function DashboardPage() {
           </CardContent>
         </Card>
 
-        <div className="mb-4">
-          <h3 className="text-lg font-medium mb-2">Upcoming</h3>
-          <div className="flex items-center gap-2 text-gray-500 text-sm mb-6">
-            <Calendar className="h-4 w-4" />
-            <span>Therapy session with Dr. Smith on Aug 10 at 11am</span>
+        <div className="mb-4 border p-3 rounded-sm border-blue-300">
+          <h3 className="text-lg font-medium mb-2">Upcoming:</h3>
+          <div className="flex items-center gap-4 mb-6 p-3 bg-white/5 rounded-xl border border-white/10 backdrop-blur-md">
+            <div className="flex flex-col items-center justify-center bg-white/10 rounded- p-2 w-14 h-14 border border-white/20">
+              <span className="text-xs text-gray-400">APR</span>
+              <span className="text-lg font-semibold text-gray-500">25</span>
+            </div>
+            <div className="flex flex-col text-sm text-gray-300">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4 text-blue-500" />
+                <span className="text-gray-600">11:00 AM</span>
+              </div>
+              <span className="underline text-gray-600">Therapy session with Dr. Smith</span>
+            </div>
           </div>
         </div>
 

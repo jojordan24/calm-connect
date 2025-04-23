@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@/contexts/auth-context";
-
+import { ChatbotLauncher } from "./components/ChatbotLauncher";
 // Pages
 import Index from "./pages/Index";
 import WelcomePage from "./pages/WelcomePage";
@@ -42,6 +42,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
+        <ChatbotLauncher />
       </TooltipProvider>
     </AuthProvider>
   </QueryClientProvider>

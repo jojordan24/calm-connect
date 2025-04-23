@@ -39,10 +39,10 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // For now, we'll simulate a successful login with a mock user
     const mockUser = {
       id: "user-123",
-      name: "Akhmad Mamirov",
+      name: "Jojo Jordan",
       email: email,
-      avatar: "/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png",
-      location: "SAN FRANCISCO, CA",
+      avatar: "/jojo_profile.jpeg",
+      location: "New York, NY",
       interests: ["Yoga for stress relief", "Reading"]
     };
     
@@ -60,9 +60,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     // For now, we'll simulate a successful registration with a mock user
     const mockUser = {
       id: "user-" + Math.floor(Math.random() * 1000),
-      name: name || "Akhmad Mamirov",
+      name: name || "Jojo Jordan",
       email: email,
-      avatar: "/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png",
+      avatar: "/jojo_profile.jpeg",
       location: "SAN FRANCISCO, CA",
       interests: ["Yoga for stress relief", "Reading"]
     };
