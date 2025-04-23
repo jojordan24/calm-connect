@@ -12,7 +12,7 @@ export default function WelcomePage() {
         <div className="w-full"></div>
         
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome back Jojo!</h1>
+          <h1 className="text-3xl font-bold mb-6 text-thrive-dark-blue drop-shadow-sm">Welcome back Jo!</h1>
           <div className="mb-4">
             <UserAvatar 
               name="Jojo Jordan" 
@@ -38,7 +38,7 @@ export default function WelcomePage() {
           </Link>
           <Link to="/register" className="block">
             <Button 
-              className="w-full bg-thrive-light-purple/50 py-5 text-lg text-thrive-dark-blue hover:bg-thrive-light-purple/70 border-thrive-light-purple/30"
+              className="w-full  bg-thrive-light-purple/50 py-5 text-lg text-thrive-dark-blue hover:bg-thrive-light-purple/70 "
             >
               REGISTER
             </Button>

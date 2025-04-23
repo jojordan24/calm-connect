@@ -27,14 +27,14 @@ export default function ProfilePage() {
     <div className="min-h-screen pb-20">
       <div className="p-6 flex flex-col items-center">
         <UserAvatar 
-          name={user?.name || "Akhmad Mamirov"} 
+          name={user?.name || "Jojo Jordan"} 
           image={user?.avatar || "/lovable-uploads/5cc1789e-4978-46a1-b53d-5d67b8b668ea.png"}
           size="xl"
           className="mb-4"
         />
         
-        <h1 className="text-2xl font-bold mb-1">{user?.name || "Akhmad Mamirov"}</h1>
-        <p className="text-gray-500 mb-4">{user?.location || "SAN FRANCISCO, CA"}</p>
+        <h1 className="text-2xl font-bold mb-1">{user?.name || "Jojo Jordan"}</h1>
+        <p className="text-gray-500 mb-4">{user?.location || "New York, NY"}</p>
         
         <DailyQuote className="w-full mb-6" />
 

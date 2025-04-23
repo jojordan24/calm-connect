@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { LineChart, Line, XAxis, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 import { Calendar, Home, Dumbbell, BookOpen } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { UserAvatar } from "@/components/ui/user-avatar";
@@ -11,13 +11,13 @@ import { useNavigate, Link } from "react-router-dom";
 
 // Mock mood data
 const moodData = [
-  { day: 'Aug 1', value: 70 },
-  { day: 'Aug 2', value: 65 },
-  { day: 'Aug 3', value: 80 },
-  { day: 'Aug 4', value: 75 },
-  { day: 'Aug 5', value: 60 },
-  { day: 'Aug 6', value: 85 },
-  { day: 'Aug 7', value: 73 },
+  { day: "Mon", value: 2 },
+  { day: "Tue", value: 3 },
+  { day: "Wed", value: 2 },
+  { day: "Thu", value: 1 },
+  { day: "Fri", value: 2 },
+  { day: "Sat", value: 3 },
+  { day: "Sun", value: 2.5 },
 ];
 
 // Self care suggestions with proper links
@@ -46,7 +46,11 @@ export default function DashboardPage() {
   const [greeting, setGreeting] = useState("Good day");
   const [currentTime, setCurrentTime] = useState("");
   const [weather, setWeather] = useState({ temp: "65°F", condition: "clear" });
-  
+  const moodMap = {
+    1: "😔",
+    2: "🙂",
+    3: "😄",
+  };
   useEffect(() => {
     // Redirect if not authenticated
     if (!isAuthenticated) {
@@ -74,7 +78,7 @@ export default function DashboardPage() {
     <div className="min-h-screen pb-20">
       <div className="p-6">
         <div className="mb-6">
-          <h1 className="text-2xl font-bold mb-1">Dashboard</h1>
+          {/* <h1 className="text-2xl font-bold mb-1">Dashboard</h1> */}
           <div className="flex items-center gap-4 mb-4">
             <UserAvatar 
               name={user.name} 
@@ -98,33 +102,42 @@ export default function DashboardPage() {
           <p className="text-sm text-gray-500 mb-2">You recorded your mood 2 days ago</p>
         </div>
 
-        <Card className="mb-6">
-          <CardHeader className="pb-2">
-            <CardTitle className="text-lg text-gray-700">Mood over time</CardTitle>
-            <div className="flex justify-between items-center">
-              <span className="text-2xl font-bold">Stable</span>
-              {/* <span className="text-sm text-red-500">Last 7 days -5%</span> */}
-            </div>
-          </CardHeader>
-          <CardContent>
-            <div className="h-32">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={moodData}>
-                  <XAxis dataKey="day" tick={{ fontSize: 12 }} />
-                  <Line 
-                    type="monotone" 
-                    dataKey="value" 
-                    stroke="#9b87f5" 
-                    strokeWidth={2} 
-                    dot={{ r: 0 }}
-                    activeDot={{ r: 4 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </CardContent>
-        </Card>
 
+    <Card className="mb-6">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-lg text-gray-700">Mood over time</CardTitle>
+        <div className="flex justify-between items-center">
+          <span className="text-2xl font-bold">Volatile</span>
+        </div>
+      </CardHeader>
+      <CardContent>
+        <div className="h-32">
+          <ResponsiveContainer width="100%" height="100%">
+            <LineChart data={moodData}>
+              <XAxis dataKey="day" tick={{ fontSize: 12 }} />
+              <YAxis
+                domain={[1, 3]}
+                ticks={[1, 2, 3]}
+                tickFormatter={(val) => moodMap[val]}
+                tick={{ fontSize: 16 }}
+              />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke="#9b87f5"
+                strokeWidth={2}
+                dot={{ r: 3 }}
+                activeDot={{ r: 4 }}
+              />
+              <Tooltip
+                formatter={(value: any) => moodMap[value] || value}
+                labelFormatter={(label) => `Day: ${label}`}
+              />
+            </LineChart>
+          </ResponsiveContainer>
+        </div>
+      </CardContent>
+    </Card>
         <div className="mb-4 border p-3 rounded-sm border-blue-300">
           <h3 className="text-lg font-medium mb-2">Upcoming:</h3>
           <div className="flex items-center gap-4 mb-6 p-3 bg-white/5 rounded-xl border border-white/10 backdrop-blur-md">
@@ -147,7 +160,7 @@ export default function DashboardPage() {
           <div className="grid grid-cols-2 gap-4">
             {selfCareItems.map(item => (
               <Link to={item.link} key={item.id} className="block">
-                <div className="card-hover rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
+                <div className="card-hover cursor-pointer rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-200">
                   <div className="relative h-40">
                     <img 
                       src={item.image} 
