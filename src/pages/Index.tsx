@@ -1,44 +1,14 @@
 
 import { useEffect, useState } from "react";
 import { LineChart, Line, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
-import { Calendar, Home, Dumbbell, BookOpen } from "lucide-react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Calendar} from "lucide-react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { UserAvatar } from "@/components/ui/user-avatar";
 import { useAuth } from "@/contexts/auth-context";
 import { BottomNav } from "@/components/navigation/BottomNav";
 import { Button } from "@/components/ui/button";
 import { useNavigate, Link } from "react-router-dom";
-
-// Mock mood data
-const moodData = [
-  { day: "Mon", value: 2 },
-  { day: "Tue", value: 3 },
-  { day: "Wed", value: 2 },
-  { day: "Thu", value: 1 },
-  { day: "Fri", value: 2 },
-  { day: "Sat", value: 3 },
-  { day: "Sun", value: 2.5 },
-];
-
-// Self care suggestions with proper links
-const selfCareItems = [
-  {
-    id: 1,
-    title: "Yoga for stress relief",
-    description: "15 minute guided session",
-    icon: Dumbbell,
-    image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843",
-    link: "/discover?activity=yoga"
-  },
-  {
-    id: 2,
-    title: "Reading list",
-    description: "Recommended wellness books",
-    icon: BookOpen,
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    link: "/discover?activity=reading"
-  }
-];
+import { selfCareItems, moodData } from "@/data/common";
 
 export default function DashboardPage() {
   const { user, isAuthenticated } = useAuth();
@@ -57,26 +27,21 @@ export default function DashboardPage() {
   };
   
   useEffect(() => {
-    // Redirect if not authenticated
     if (!isAuthenticated) {
       navigate("/welcome");
     }
-    
-    // Set greeting based on time of day
+
     const hour = new Date().getHours();
     if (hour < 12) setGreeting("Good morning");
     else if (hour < 18) setGreeting("Good afternoon");
     else setGreeting("Good evening");
     
-    // Set current time
     const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     setCurrentTime(time);
-    
-    // Mock weather data could be fetched from API in real implementation
   }, [isAuthenticated, navigate]);
 
   if (!isAuthenticated || !user) {
-    return null; // Will redirect in useEffect
+    return null; 
   }
 
   return (
@@ -99,7 +64,7 @@ export default function DashboardPage() {
             <div className="ml-auto cursor-pointer">
               <Button
                 variant="default"
-                className="bg-green-500 text-white px-6 py-3 rounded-md text-sm font-semibold shadow-md transition-all"
+                className="bg-thrive-purple text-white px-6 py-3 rounded-md text-sm font-semibold shadow-md transition-all"
                 onClick={handleCrisisResources}
               >
                 ☎️ My Resources
